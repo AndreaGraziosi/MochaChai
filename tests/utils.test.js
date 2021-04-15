@@ -67,14 +67,27 @@ it("Should create a new (object) Item with name and price", function() {
 })
 
 it("Should return an array containing all items in cart", function() {
-  const item = utils.getShoppingCart()
-  expect(item.to.be.a([]))
+  const cart = utils.getShoppingCart()
+  expect(cart).to.be.a("array")
 })
 
 it("Should add a new item to the shopping cart", function() {
-  const item = utils.addItemToCart("banana")
+  
+  expect("apple").to.be.a("string")
+  expect(0.99).to.be.a("number")
+
+  const cart = utils.getShoppingCart(),
+  item = utils.createItem("apple", 0.99),
+  prevCartSize = cart.length
+
+  expect(cart).to.be.a("array")
   expect(item).to.be.a("object")
-  expect(item).to.have.property("banana")
+  utils.addItemToCart(item)
+
+  const newCart = utils.getShoppingCart()
+
+  expect(newCart).to.be.a("array")
+  expect(newCart.length).to.equal(prevCartSize + 1)
 })
 
 it("Should return the number of items in the cart", function() {

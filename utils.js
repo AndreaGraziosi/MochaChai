@@ -36,20 +36,20 @@ const createItem = (name, price) => {
 }
 
 const getShoppingCart = () => {
-  getShoppingCart.items()
-   
+  return shoppingCart 
+
 }
 
 const addItemToCart = (item) => {
-  // should add item to shopping cart
+  shoppingCart.push(item)
 }
 
 const getNumItemsInCart = () => {
-  // should return the total quantity of items in cart
+  shoppingCart.length
 }
 
 const removeItemFromCart = (item) => {
-  // should remove item from shopping cart
+  shoppingCart.splice(item)
 }
 
 module.exports = {
