@@ -7,15 +7,15 @@ const sayHello = () => {
 }
 
 const area = (w, h) => {
-  // should return the area
+  return w * h 
 }
 
 const perimeter = (w, h) => {
-  // should return the perimeter
+  return (2*w + 2*h)
 }
 
 const circleArea = r => {
-  // should return the area of the circle
+ return Math.exp(r*Math.PI)
 }
 
 // ========================================================
@@ -36,7 +36,8 @@ const createItem = (name, price) => {
 }
 
 const getShoppingCart = () => {
-  // should return the current state of shopping cart
+  getShoppingCart.items()
+   
 }
 
 const addItemToCart = (item) => {

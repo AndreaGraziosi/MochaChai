@@ -26,7 +26,23 @@ it("should say hello", function() {
 // This is called "Red-Green-Refactor"
 // ========================================================
 
+it('area should equal w*h', function() {
+  const  width=2, height=2, area = utils.area(width, height)
+  expect (width).to.be.a('number')
+  expect(height).to.be.a('number')
+  expect(area).to.be.a('number')
+  expect(area).to.be.equal(width * height)
 
+})
+it("perimeter should equal 2w + 2h", function() {
+  const width = 11, height = 15, peri = utils.perimeter(width, height)
+
+  expect(width).to.not.be.a('null')
+  expect(width).to.be.a('number')
+  expect(height).to.be.a('number')
+  expect(peri).to.be.a('number')
+  expect(peri).to.equal(2*width + 2*height)
+})
 
 
 // ========================================================
@@ -50,14 +66,27 @@ it("Should create a new (object) Item with name and price", function() {
   expect(item).to.have.property("quantity", 1)
 })
 
-it("Should return an array containing all items in cart")
+it("Should return an array containing all items in cart", function() {
+  const item = utils.getShoppingCart()
+  expect(item.to.be.a([]))
+})
 
-it("Should add a new item to the shopping cart")
+it("Should add a new item to the shopping cart", function() {
+  const item = utils.addItemToCart("banana")
+  expect(item).to.be.a("object")
+  expect(item).to.have.property("banana")
+})
 
-it("Should return the number of items in the cart")
+it("Should return the number of items in the cart", function() {
+  const item = utils.getNumItemsInCart()
+ 
+})
 
-it("Should remove items from cart")
-
+it("Should remove items from cart", function() {
+  const item = utils.removeItemFromCart()
+ 
+})
+//check length what the array is like before and after
 // ========================================================
 // Stretch Challenges
 // ========================================================
