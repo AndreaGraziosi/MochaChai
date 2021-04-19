@@ -19,7 +19,7 @@ const circleArea = r => {
 }
 
 // ========================================================
-// Level 2 Challenges
+// Level 2 Challenge
 // ========================================================
 // NOTE: You will need to implement methods below (not yet
 // defined) in order to make the tests pass.
